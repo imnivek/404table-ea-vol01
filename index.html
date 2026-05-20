@@ -1,0 +1,3103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5efe2">
+<title>90 分鐘 AI 自救 ─ 把 10 年行政雜事變成跳槽履歷｜404 TABLE × BOGI</title>
+<meta name="description" content="90 分鐘 AI 自救 ─ 行政、秘書、EA 限定。妳愣住 3 秒只說得出 Excel、訂機票、訂便當？這堂課把妳 10 年累積、變成一份能跳槽的履歷。5/31 台北實體、NT$500。">
+<meta property="og:title" content="90 分鐘 AI 自救 ─ 把 10 年行政雜事變成跳槽履歷">
+<meta property="og:description" content="妳替老闆記下了 1,200 個人。當天帶走 6 件具體交付物：人脈摺頁、SOP 模板、AI Prompt、自介金句⋯⋯讓妳的 10 年第一次被看見。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/IMG-Y01_茶水間愣神_主場景.png">
+<link rel="icon" type="image/png" href="images/404TABLE_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Caveat:wght@400;500;700&family=Indie+Flower&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+   * 404 TABLE ── DESIGN TOKENS
+   * ============================================================ */
+  :root {
+    --paper: #f5efe2;
+    --paper-warm: #ede4cf;
+    --cream-100: #fffdf3;
+    --ink: #0d0d0d;
+    --ink-soft: #2a2a2a;
+    --highlight: #faff00;
+    --highlight-deep: #d6d800;
+    --bubblegum: #ff5fa2;
+    --bubblegum-soft: #ffb3d1;
+    --chrome: #c0c8d0;
+    --chrome-shine: #e8edf2;
+    --marker-green: #6bd968;
+    --tomato: #ff3838;
+    --tomato-deep: #cc1c1c;
+    --washi-blue: #7bb6d9;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --header-h: 76px;
+    --marquee-h: 32px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + var(--marquee-h));
+  }
+  body {
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(0,0,0,0.022) 0%, transparent 50%),
+      radial-gradient(circle at 78% 68%, rgba(0,0,0,0.018) 0%, transparent 50%),
+      url("images/IMG-Y10_米紙底紋_seamless.png"),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+    background-repeat: no-repeat, no-repeat, repeat, repeat;
+    background-size: auto, auto, 512px, 240px;
+  }
+  body.has-mobile-cta { padding-bottom: 84px; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; }
+  section { position: relative; padding: 88px 0; }
+
+  /* ============================================================
+   * MARQUEE 跑馬燈
+   * ============================================================ */
+  .marquee {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--marquee-h);
+    background: var(--ink);
+    color: var(--paper);
+    z-index: 110;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--ink);
+  }
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    white-space: nowrap;
+    animation: marquee 32s linear infinite;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 32px;
+  }
+  .marquee-track .pink { color: var(--bubblegum); }
+  .marquee-track .yel { color: var(--highlight); }
+  .marquee-track .green { color: var(--marker-green); }
+  .marquee-track .star { color: var(--tomato); font-size: 13px; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ============================================================
+   * MASTHEAD HEADER
+   * ============================================================ */
+  .masthead {
+    position: fixed;
+    top: var(--marquee-h); left: 0; right: 0;
+    height: var(--header-h);
+    background: rgba(245, 239, 226, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--ink);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+  }
+  .masthead .m-inner {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+  .m-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .m-left .brand-logo {
+    height: 38px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(1.5px 1.5px 0 rgba(0,0,0,0.08));
+  }
+  .m-left .holo-sub { display: none; color: var(--ink-soft); }
+  @media (min-width: 760px) {
+    .m-left .holo-sub { display: inline; }
+  }
+  .m-center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .m-center .vol-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--tomato);
+    font-weight: 700;
+  }
+  .m-center .vol-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--chrome-shine) 0%, var(--chrome) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .m-center .vol-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  .m-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+  }
+  .m-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .m-date strong { color: var(--tomato); font-weight: 700; }
+  .m-cta {
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.22s var(--ease);
+    border: 2px solid var(--ink);
+    white-space: nowrap;
+    transform: rotate(-1deg);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .m-cta:hover {
+    background: var(--ink);
+    color: var(--highlight);
+    transform: rotate(0deg) translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .progress-bar {
+    position: absolute;
+    bottom: -2px; left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--tomato);
+    transition: width 0.2s linear;
+  }
+
+  /* ============================================================
+   * SHARED ── REVEAL / ACT HEADER / DECORATIONS
+   * ============================================================ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-r {
+    transform: translateX(-22px);
+  }
+  .reveal-r.in {
+    transform: translateX(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-r { opacity: 1; transform: none; transition: none; }
+    .marquee-track { animation: none; }
+  }
+
+  /* ── ACT HEADER ── */
+  .act-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--ink);
+    position: relative;
+  }
+  .act-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 88px;
+    height: 6px;
+    background: var(--tomato);
+  }
+  .act-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 84px;
+    line-height: 0.85;
+    color: var(--ink);
+    letter-spacing: -2px;
+  }
+  .act-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+  .act-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .act-tag.red-bg { background: var(--tomato); color: var(--cream-100); }
+  .act-tag.yellow-bg { background: var(--highlight); color: var(--ink); }
+  .act-tag.pink-bg { background: var(--bubblegum); color: var(--ink); }
+  .act-tag.ink-bg { background: var(--ink); color: var(--paper); }
+  .act-tag.chrome-bg {
+    background: linear-gradient(180deg, var(--chrome-shine), var(--chrome));
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .act-title-en {
+    font-family: 'Space Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 2.5px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+
+  /* ── WASHI TAPE ── */
+  .washi {
+    position: absolute;
+    width: 84px;
+    height: 22px;
+    opacity: 0.88;
+    transform: rotate(var(--angle, -4deg));
+    pointer-events: none;
+    z-index: 3;
+  }
+  .washi::before, .washi::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; width: 6px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.6), transparent);
+  }
+  .washi::before { left: 0; }
+  .washi::after { right: 0; transform: scaleX(-1); }
+  .washi.yellow { background: var(--highlight); }
+  .washi.pink { background: var(--bubblegum); }
+  .washi.blue { background: var(--washi-blue); }
+  .washi.green { background: var(--marker-green); }
+  .washi.dotted-cream {
+    background: var(--paper-warm);
+    background-image: radial-gradient(var(--ink) 1px, transparent 1px);
+    background-size: 8px 8px;
+  }
+  .washi.stripe-red {
+    background: repeating-linear-gradient(45deg,
+      var(--tomato) 0 6px, var(--cream-100) 6px 12px);
+  }
+
+  /* ── POLAROID ── */
+  .polaroid {
+    background: var(--cream-100);
+    padding: 14px 14px 56px 14px;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.1), inset 0 0 0 1px rgba(0,0,0,0.04);
+    transform: rotate(var(--angle, -2deg));
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    position: relative;
+    z-index: 2;
+  }
+  .polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.14);
+    z-index: 10;
+  }
+  .polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--paper-warm);
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+  .polaroid .caption {
+    position: absolute;
+    bottom: 14px; left: 14px; right: 14px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 17px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  /* ── STICKY NOTE ── */
+  .sticky-note {
+    position: relative;
+    padding: 18px 18px 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+    line-height: 1.35;
+    color: var(--ink);
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.08);
+    transform: rotate(var(--angle, -3deg));
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    z-index: 3;
+  }
+  .sticky-note.pink { background: var(--bubblegum-soft); }
+  .sticky-note.yellow { background: var(--highlight); }
+  .sticky-note.blue { background: var(--washi-blue); }
+  .sticky-note.green { background: var(--marker-green); }
+  .sticky-note:hover {
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: 9px 9px 0 rgba(0,0,0,0.12);
+  }
+  .sticky-note .pin {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--tomato);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.4);
+  }
+  .sticky-note .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ── HIGHLIGHT MARKER ── */
+  .hl-y {
+    background: linear-gradient(transparent 55%, var(--highlight) 55%, var(--highlight) 92%, transparent 92%);
+    padding: 0 3px;
+  }
+  .hl-pink {
+    background: linear-gradient(transparent 55%, var(--bubblegum-soft) 55%, var(--bubblegum-soft) 92%, transparent 92%);
+    padding: 0 3px;
+  }
+  .hl-green {
+    background: linear-gradient(transparent 55%, var(--marker-green) 55%, var(--marker-green) 92%, transparent 92%);
+    padding: 0 3px;
+  }
+
+  /* ── CIRCLED (Permanent Marker hand-circle, SVG) ── */
+  .circled {
+    position: relative;
+    display: inline-block;
+    padding: 0 6px;
+  }
+  .circled::before {
+    content: '';
+    position: absolute;
+    inset: -8px -14px;
+    background:
+      radial-gradient(ellipse at center,
+        transparent 0,
+        transparent 64%,
+        var(--ink) 65%,
+        var(--ink) 67%,
+        transparent 68%);
+    transform: rotate(-3deg);
+    pointer-events: none;
+    opacity: 0.85;
+  }
+
+  /* ── CROSSED OUT (RED STAMP) ── */
+  .crossed {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border: 2px solid var(--tomato);
+    background: var(--cream-100);
+    color: var(--tomato);
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: rotate(var(--angle, -3deg));
+  }
+  .crossed::after {
+    content: '';
+    position: absolute;
+    left: -6%; right: -6%; top: 50%;
+    height: 3px;
+    background: var(--tomato);
+    transform: rotate(-8deg);
+  }
+
+  /* ── MARKER DOODLES (CSS-only fallback) ── */
+  .doodle-arrow {
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--ink);
+    font-size: 28px;
+    transform: rotate(-8deg);
+  }
+  .doodle-note {
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--tomato);
+    font-size: 22px;
+    transform: rotate(-4deg);
+    letter-spacing: 1px;
+  }
+
+  /* ── TAPE-PIN HEAD STAMP ── */
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--highlight);
+    border: 2px solid var(--ink);
+    font-family: 'Anton', sans-serif;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--ink);
+    text-align: center;
+    transform: rotate(-12deg);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+  }
+  .stamp.red { background: var(--tomato); color: var(--cream-100); }
+  .stamp.green { background: var(--marker-green); }
+
+  /* ============================================================
+   * ACT 01 ── HERO
+   * ============================================================ */
+  .act-01 {
+    padding-top: calc(var(--header-h) + var(--marquee-h) + 60px);
+    padding-bottom: 80px;
+  }
+  .act-01-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: start;
+  }
+  @media (max-width: 880px) {
+    .act-01-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  .course-banner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 18px;
+    padding: 12px 18px 14px;
+    background: var(--ink);
+    color: var(--cream-100);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--highlight), 7px 7px 0 var(--ink);
+    transform: rotate(-1.4deg);
+    position: relative;
+  }
+  .course-banner::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: 18px;
+    width: 64px; height: 18px;
+    background: var(--bubblegum);
+    transform: rotate(-6deg);
+    opacity: 0.92;
+  }
+  .course-banner .cb-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--highlight);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .course-banner .cb-main {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(20px, 3vw, 26px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--cream-100);
+  }
+  .course-banner .cb-main .pop {
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 2px 8px;
+    margin: 0 2px;
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+  .course-banner .cb-sub {
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+    color: var(--highlight);
+    line-height: 1.2;
+    margin-top: 4px;
+  }
+
+  .hero-display .eyebrow {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+    transform: rotate(-2deg);
+    display: inline-block;
+  }
+  .hero-h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(54px, 9vw, 96px);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 8px 0 20px;
+    color: var(--ink);
+  }
+  .hero-h1 .stack {
+    display: block;
+  }
+  .hero-h1 .stack:nth-child(1) { opacity: 1; }
+  .hero-h1 .stack:nth-child(2) { opacity: 0.55; transform: translateX(8px); }
+  .hero-h1 .stack:nth-child(3) { opacity: 0.22; transform: translateX(18px); }
+
+  .answer-flip {
+    margin: 32px 0 36px;
+    padding: 22px 26px;
+    background: var(--cream-100);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(-1deg);
+    position: relative;
+  }
+  .answer-flip .flip-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2.5px;
+    color: var(--tomato);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .answer-flip h2 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+  }
+  .answer-flip h2 .em-red {
+    color: var(--tomato);
+    background: linear-gradient(transparent 60%, var(--highlight) 60%, var(--highlight) 90%, transparent 90%);
+    padding: 0 4px;
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 32px 0;
+  }
+  @media (max-width: 600px) {
+    .hero-meta { grid-template-columns: repeat(2, 1fr); }
+  }
+  .meta-cell {
+    background: var(--cream-100);
+    border: 2px solid var(--ink);
+    padding: 14px 12px;
+    text-align: center;
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(var(--meta-angle, 0deg));
+  }
+  .meta-cell:nth-child(1) { --meta-angle: -1deg; }
+  .meta-cell:nth-child(2) { --meta-angle: 0.8deg; }
+  .meta-cell:nth-child(3) { --meta-angle: -0.5deg; }
+  .meta-cell:nth-child(4) {
+    --meta-angle: 1.5deg;
+    background: var(--ink);
+    color: var(--cream-100);
+  }
+  .meta-cell:nth-child(4) .meta-label { color: var(--highlight); }
+  .meta-cell .meta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 2px;
+    color: var(--tomato);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .meta-cell .meta-value {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+  .meta-cell .meta-sub {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+  .meta-cell:nth-child(4) .meta-sub { color: rgba(255,253,243,0.7); }
+  .meta-cell .price-old {
+    text-decoration: line-through;
+    color: rgba(255,253,243,0.5);
+    font-size: 13px;
+    margin-right: 6px;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .mega-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 18px 32px;
+    border-radius: 4px;
+    border: 3px solid var(--ink);
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: rotate(-1.5deg);
+    box-shadow: 7px 7px 0 var(--ink);
+    transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
+    cursor: pointer;
+  }
+  .mega-cta .arrow { font-size: 28px; }
+  .mega-cta:hover {
+    transform: rotate(0deg) translate(-2px, -2px);
+    box-shadow: 11px 11px 0 var(--ink);
+    background: var(--tomato-deep);
+  }
+  .mega-cta:active {
+    transform: rotate(0deg) translate(6px, 6px);
+    box-shadow: 1px 1px 0 var(--ink);
+  }
+
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--ink-soft);
+    font-family: 'Space Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 1.4px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+  .byline strong { color: var(--ink); }
+  .byline-portrait {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--ink);
+    background: var(--paper-warm);
+  }
+  .byline-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
+
+  /* ── HERO SIDE: pantry polaroid + script ── */
+  .hero-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .pantry-polaroid {
+    background: var(--cream-100);
+    padding: 18px 18px 64px 18px;
+    box-shadow: 10px 10px 0 var(--highlight), 11px 11px 0 var(--ink);
+    transform: rotate(-3deg);
+    position: relative;
+    transition: transform 0.4s var(--ease);
+  }
+  .pantry-polaroid:hover { transform: rotate(-1deg) translate(-2px, -2px); }
+  .pantry-polaroid img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, var(--paper-warm), var(--paper));
+  }
+  .pantry-polaroid .caption {
+    position: absolute;
+    bottom: 16px; left: 18px; right: 18px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    text-align: center;
+    color: var(--ink-soft);
+  }
+  .pantry-polaroid .caption strong { color: var(--tomato); }
+
+  .pantry-script {
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 22px 24px;
+    transform: rotate(1deg);
+    box-shadow: 5px 5px 0 var(--ink);
+    position: relative;
+    z-index: 4;
+  }
+  .pantry-script .scene-tag {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4px 9px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .pantry-script .line {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    margin: 6px 0;
+  }
+  .pantry-script .line.q {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: var(--tomato);
+    margin: 12px 0;
+  }
+  .pantry-script .line.beat {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--ink);
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  .pantry-script .stamps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+
+  .ps-note {
+    position: absolute;
+    top: 38%;
+    right: -56px;
+    width: 168px;
+    z-index: 8;
+  }
+  @media (max-width: 1100px) { .ps-note { right: -24px; top: 36%; width: 152px; } }
+  @media (max-width: 880px) { .ps-note { position: static; width: 100%; max-width: 240px; margin: -8px auto 0; } }
+
+  /* ── HERO floating scatter props ── */
+  .scatter-prop {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.92;
+    transition: transform 0.3s var(--ease);
+  }
+  .scatter-prop.tape-1 {
+    top: -8px; left: 18%;
+    width: 110px; height: 28px;
+    background: var(--highlight);
+    transform: rotate(-7deg);
+  }
+  .scatter-prop.tape-2 {
+    top: 12px; right: 12%;
+    width: 90px; height: 26px;
+    background: var(--bubblegum);
+    transform: rotate(8deg);
+  }
+
+  /* ============================================================
+   * ACT 02 ── 1,200
+   * ============================================================ */
+  .act-02 {
+    background: var(--paper-warm);
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .act-02::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("images/IMG-Y12_拼貼大爆炸_mood.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  .act-02 .wrap { position: relative; z-index: 2; }
+
+  .big-number-block {
+    text-align: center;
+    margin: 40px 0 56px;
+    position: relative;
+  }
+  .big-number-block .label-above {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--tomato);
+    background: var(--cream-100);
+    border: 2px solid var(--ink);
+    padding: 6px 14px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+  }
+  .big-number {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(140px, 22vw, 320px);
+    line-height: 0.9;
+    letter-spacing: -6px;
+    background: linear-gradient(180deg,
+      var(--chrome-shine) 0%,
+      #ffffff 40%,
+      var(--chrome) 65%,
+      #6a7480 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(4px 4px 0 var(--ink));
+    position: relative;
+    display: inline-block;
+  }
+  .big-number .star {
+    position: absolute;
+    top: 10%; right: -8%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.3em;
+    color: var(--tomato);
+    -webkit-text-fill-color: var(--tomato);
+    transform: rotate(15deg);
+    filter: none;
+  }
+  .big-number-caption {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(20px, 3vw, 28px);
+    margin-top: 16px;
+    color: var(--ink);
+  }
+  .big-number-caption strong {
+    background: var(--highlight);
+    padding: 2px 8px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0 var(--ink);
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+  .formula {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    text-transform: uppercase;
+  }
+
+  .proof-list {
+    list-style: none;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .proof-list li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 18px 22px;
+    background: var(--cream-100);
+    border: 2px solid var(--ink);
+    margin-bottom: 14px;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: all 0.25s var(--ease);
+    position: relative;
+  }
+  .proof-list li:nth-child(odd) { transform: rotate(-0.6deg); }
+  .proof-list li:nth-child(even) { transform: rotate(0.7deg); }
+  .proof-list li:hover {
+    transform: rotate(0deg) translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--highlight), 9px 9px 0 var(--ink);
+  }
+  .proof-list .num {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    color: var(--tomato);
+    line-height: 0.85;
+    flex-shrink: 0;
+    min-width: 40px;
+  }
+  .proof-list .check {
+    color: var(--marker-green);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    margin-right: 6px;
+  }
+  .proof-list .text {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    flex: 1;
+  }
+  .proof-list .text strong { background: var(--highlight); padding: 0 4px; }
+
+  .ability-banner {
+    margin: 56px auto 0;
+    max-width: 760px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border: 6px solid var(--highlight);
+    text-align: center;
+    transform: rotate(-0.8deg);
+    box-shadow: 10px 10px 0 var(--tomato);
+    position: relative;
+  }
+  .ability-banner::before {
+    content: '★';
+    position: absolute;
+    top: -22px; left: 50%;
+    transform: translateX(-50%);
+    color: var(--tomato);
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    line-height: 32px;
+    font-size: 18px;
+  }
+  .ability-banner .lead {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--highlight);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .ability-banner .stmt {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(20px, 2.6vw, 28px);
+    line-height: 1.4;
+  }
+  .ability-banner .stmt em {
+    font-style: normal;
+    color: var(--highlight);
+  }
+
+  .key-quote-02 {
+    margin: 64px auto 0;
+    max-width: 720px;
+    text-align: center;
+    position: relative;
+  }
+  .key-quote-02 .marker-circle {
+    display: inline-block;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.4;
+    color: var(--ink);
+    position: relative;
+    padding: 6px 18px;
+  }
+  .key-quote-02 .marker-circle::before {
+    content: '';
+    position: absolute;
+    inset: -6px -22px;
+    background:
+      radial-gradient(ellipse at center,
+        transparent 0,
+        transparent 64%,
+        var(--tomato) 65%,
+        var(--tomato) 67%,
+        transparent 68%);
+    transform: rotate(-2deg);
+    pointer-events: none;
+    opacity: 0.95;
+  }
+  .key-quote-02 .signoff {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: var(--tomato);
+    margin-top: 16px;
+    transform: rotate(-2deg);
+    display: inline-block;
+  }
+
+  /* ── CTA mini line ── */
+  .cta-mini-row {
+    text-align: center;
+    margin-top: 48px;
+  }
+  .cta-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cream-100);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 0 var(--bubblegum), 6px 6px 0 var(--ink);
+    transform: rotate(-1deg);
+    transition: all 0.2s var(--ease);
+  }
+  .cta-mini:hover {
+    background: var(--highlight);
+    transform: rotate(0deg) translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--bubblegum), 9px 9px 0 var(--ink);
+  }
+
+  /* ============================================================
+   * ACT 03 ── 4 件事 mood board
+   * ============================================================ */
+  .act-03 { padding: 96px 0; }
+  .four-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 12px;
+  }
+  @media (max-width: 720px) {
+    .four-grid { grid-template-columns: 1fr; gap: 26px; }
+  }
+  .four-card {
+    position: relative;
+    padding: 32px 28px;
+    border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+    z-index: 2;
+  }
+  .four-card.c-01 { background: var(--cream-100); transform: rotate(-1.8deg); }
+  .four-card.c-02 {
+    background: var(--bubblegum-soft);
+    transform: rotate(1.5deg);
+    box-shadow: 8px 8px 0 var(--tomato);
+  }
+  .four-card.c-03 {
+    background: var(--highlight);
+    transform: rotate(-1deg);
+    box-shadow: 8px 8px 0 var(--marker-green);
+  }
+  .four-card.c-04 {
+    background: var(--ink);
+    color: var(--cream-100);
+    transform: rotate(2deg);
+    box-shadow: 8px 8px 0 var(--bubblegum);
+  }
+  .four-card:hover {
+    transform: rotate(0deg) translate(-3px, -3px);
+    z-index: 10;
+  }
+  .four-card.c-01:hover { box-shadow: 11px 11px 0 var(--ink); }
+  .four-card.c-02:hover { box-shadow: 11px 11px 0 var(--tomato); }
+  .four-card.c-03:hover { box-shadow: 11px 11px 0 var(--marker-green); }
+  .four-card.c-04:hover { box-shadow: 11px 11px 0 var(--bubblegum); }
+
+  .four-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 56px;
+    line-height: 0.85;
+    margin-bottom: 8px;
+  }
+  .four-card.c-04 .four-num { color: var(--highlight); }
+  .four-tag {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4px 10px;
+    margin-bottom: 14px;
+  }
+  .four-card.c-04 .four-tag { background: var(--cream-100); color: var(--ink); }
+  .four-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .four-body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  .four-card.c-04 .four-body { color: rgba(255,253,243,0.85); }
+  .four-callback {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed currentColor;
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+    opacity: 0.8;
+  }
+  .four-callback::before { content: '↳ '; opacity: 0.6; }
+  .key-stamp {
+    position: absolute;
+    top: -18px; right: -14px;
+    z-index: 5;
+  }
+  .take-home {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: rgba(250, 255, 0, 0.55);
+    border-left: 4px solid var(--ink);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+  .four-card.c-02 .take-home { background: var(--cream-100); }
+  .four-card.c-03 .take-home { background: var(--cream-100); border-left-color: var(--tomato); }
+  .four-card.c-04 .take-home {
+    background: var(--highlight);
+    color: var(--ink);
+    border-left-color: var(--tomato);
+  }
+  .take-home .th-label {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--tomato);
+    background: var(--cream-100);
+    border: 1.5px solid var(--ink);
+    padding: 2px 7px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* ─── DELIVERABLES BANNER ─── */
+  .deliverables-banner {
+    margin: 64px 0 12px;
+    padding: 36px 36px 32px;
+    background: var(--cream-100);
+    border: 3px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--highlight), 14px 14px 0 var(--ink);
+    position: relative;
+    transform: rotate(-0.4deg);
+  }
+  @media (max-width: 720px) {
+    .deliverables-banner { padding: 28px 22px 24px; box-shadow: 6px 6px 0 var(--highlight), 8px 8px 0 var(--ink); }
+  }
+  .deliverables-banner .db-header { text-align: center; margin-bottom: 28px; }
+  .deliverables-banner .db-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--highlight);
+    padding: 5px 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transform: rotate(-1deg);
+  }
+  .deliverables-banner .db-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+  .deliverables-banner .db-title .db-pop {
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 2px 12px;
+    display: inline-block;
+    transform: rotate(-1.5deg);
+    box-shadow: 4px 4px 0 var(--ink);
+    margin: 0 4px;
+  }
+  .deliverables-banner .db-sub {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .db-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 0 0 28px;
+    padding: 0;
+  }
+  @media (max-width: 880px) { .db-list { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .db-list { grid-template-columns: 1fr; } }
+  .db-item {
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 16px 18px;
+    box-shadow: 4px 4px 0 var(--ink);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
+  .db-item:nth-child(odd) { transform: rotate(-0.6deg); }
+  .db-item:nth-child(even) { transform: rotate(0.5deg); }
+  .db-item.d-1 { background: var(--cream-100); }
+  .db-item.d-2 { background: var(--bubblegum-soft); }
+  .db-item.d-3 { background: var(--cream-100); }
+  .db-item.d-4 { background: var(--highlight); box-shadow: 4px 4px 0 var(--tomato); }
+  .db-item.d-5 { background: var(--washi-blue); }
+  .db-item.d-6 { background: var(--marker-green); }
+  .db-item:hover {
+    transform: rotate(0deg) translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+  .db-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    line-height: 0.9;
+    color: var(--tomato);
+    flex-shrink: 0;
+    min-width: 32px;
+  }
+  .db-item strong {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 14.5px;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .db-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .db-footer {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    padding-top: 18px;
+    border-top: 2px dashed var(--ink);
+    color: var(--ink-soft);
+  }
+  .db-stamp {
+    display: inline-block;
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 4px 12px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+    transform: rotate(-2deg);
+    box-shadow: 3px 3px 0 var(--ink);
+    vertical-align: middle;
+  }
+
+  .cta-mini-row.act-03-end { margin-top: 56px; }
+
+  /* ============================================================
+   * ACT 03 ── 有形 5 件 + 無形 4 個下次（新版）
+   * ============================================================ */
+  .act-03-intro {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 0 48px;
+    color: var(--ink);
+  }
+  .act-03-intro strong { font-weight: 900; }
+
+  .take-section { margin-bottom: 72px; position: relative; }
+  .take-tangible { padding: 8px 0 32px; }
+  .take-intangible {
+    background: var(--ink);
+    color: var(--paper);
+    margin: 64px -32px 0;
+    padding: 56px 32px 48px;
+    border-top: 4px solid var(--highlight);
+    border-bottom: 4px solid var(--highlight);
+    position: relative;
+  }
+  @media (max-width: 720px) {
+    .take-intangible { margin: 48px -20px 0; padding: 44px 20px 36px; }
+  }
+  .take-intangible::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(255,212,0,0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255,95,170,0.05) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .ts-head { text-align: center; margin-bottom: 36px; position: relative; z-index: 2; }
+  .ts-eyebrow {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 3px;
+    background: var(--ink);
+    color: var(--highlight);
+    padding: 5px 14px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transform: rotate(-1.5deg);
+  }
+  .ts-eyebrow.dark {
+    background: var(--highlight);
+    color: var(--ink);
+  }
+  .ts-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4.4vw, 44px);
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+    color: var(--ink);
+  }
+  .ts-title.dark { color: var(--cream-100); }
+  .ts-title .ts-pop {
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 2px 12px;
+    display: inline-block;
+    transform: rotate(-1deg);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .ts-title .ts-pop-light {
+    background: var(--highlight);
+    color: var(--ink);
+    padding: 2px 12px;
+    display: inline-block;
+    transform: rotate(-1deg);
+    box-shadow: 4px 4px 0 var(--cream-100);
+  }
+  .ts-sub-dark {
+    margin-top: 14px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14.5px;
+    color: rgba(245,239,226,0.7);
+    letter-spacing: 0.5px;
+  }
+
+  .t5-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 880px) { .t5-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .t5-grid { grid-template-columns: 1fr; } }
+  .t5-card {
+    position: relative;
+    padding: 28px 24px 24px;
+    background: var(--cream-100);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .t5-card.t5-01 { transform: rotate(-1deg); background: var(--cream-100); }
+  .t5-card.t5-02 {
+    transform: rotate(1.2deg);
+    background: var(--highlight);
+    box-shadow: 6px 6px 0 var(--tomato);
+  }
+  .t5-card.t5-03 {
+    grid-column: span 2;
+    transform: rotate(-0.6deg);
+    background: var(--paper-warm);
+  }
+  @media (max-width: 520px) { .t5-card.t5-03 { grid-column: 1; } }
+  .t5-card.t5-04 { transform: rotate(1deg); background: var(--bubblegum-soft); }
+  .t5-card.t5-05 { transform: rotate(-1.4deg); background: var(--washi-blue); }
+  .t5-card:hover {
+    transform: rotate(0deg) translate(-3px, -3px);
+    box-shadow: 10px 10px 0 var(--ink);
+    z-index: 4;
+  }
+  .t5-card.t5-02:hover { box-shadow: 10px 10px 0 var(--tomato); }
+  .t5-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 2px;
+    color: var(--tomato);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .t5-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .t5-title strong {
+    background: linear-gradient(transparent 60%, var(--highlight) 60%, var(--highlight) 90%, transparent 90%);
+    padding: 0 4px;
+    font-weight: 900;
+  }
+  .t5-card.t5-02 .t5-title strong,
+  .t5-card.t5-04 .t5-title strong { background: var(--cream-100); }
+  .t5-body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .t5-body:last-child { margin-bottom: 0; }
+  .t5-sublist {
+    list-style: none;
+    margin: 10px 0;
+    padding: 12px 14px;
+    background: var(--cream-100);
+    border: 1.5px dashed var(--ink);
+  }
+  .t5-sublist li {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ink);
+    padding-left: 22px;
+    position: relative;
+  }
+  .t5-sublist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--marker-green);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 17px;
+  }
+
+  .cta-block-mid {
+    text-align: center;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .cta-math {
+    font-family: 'Space Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 1px;
+    color: var(--ink-soft);
+  }
+  .take-intangible .cta-math { color: rgba(245,239,226,0.7); }
+  .cta-math strong { color: var(--tomato); font-weight: 700; }
+  .cta-mini.cta-on-dark {
+    background: var(--highlight);
+    color: var(--ink);
+    border-color: var(--highlight);
+    box-shadow: 5px 5px 0 var(--tomato), 6px 6px 0 var(--cream-100);
+  }
+  .cta-mini.cta-on-dark:hover {
+    background: var(--cream-100);
+    transform: rotate(0deg) translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--tomato), 9px 9px 0 var(--cream-100);
+  }
+
+  .next-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 720px) { .next-list { grid-template-columns: 1fr; } }
+  .next-card {
+    padding: 22px 24px;
+    background: rgba(255,253,243,0.04);
+    border: 2px solid rgba(255,212,0,0.4);
+    box-shadow: 4px 4px 0 rgba(255,212,0,0.3);
+    transform: rotate(var(--rot, -0.4deg));
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .next-card:nth-child(odd) { --rot: -0.8deg; }
+  .next-card:nth-child(even) { --rot: 0.6deg; }
+  .next-card:hover {
+    transform: rotate(0deg) translate(-2px, -2px);
+    background: rgba(250,255,0,0.08);
+    box-shadow: 6px 6px 0 var(--highlight);
+  }
+  .next-label {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    background: var(--highlight);
+    color: var(--ink);
+    padding: 3px 9px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .next-before {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(245,239,226,0.55);
+    margin-bottom: 10px;
+  }
+  .next-before .strike {
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--tomato);
+  }
+  .next-after {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--cream-100);
+    font-weight: 500;
+  }
+  .next-after .hl-y-thick {
+    background: var(--highlight);
+    color: var(--ink);
+    padding: 2px 8px;
+    display: inline-block;
+    font-weight: 900;
+    box-shadow: 3px 3px 0 var(--tomato);
+    margin: 2px 0;
+  }
+
+  /* ============================================================
+   * ACT 04 ── 講師故事
+   * ============================================================ */
+  .act-04 {
+    background: var(--cream-100);
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 96px 0;
+  }
+  .teacher-spread {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-top: 8px;
+  }
+  @media (max-width: 880px) {
+    .teacher-spread { grid-template-columns: 1fr; gap: 44px; }
+  }
+  .teacher-polaroid {
+    background: var(--cream-100);
+    padding: 18px 18px 70px 18px;
+    box-shadow: 8px 8px 0 var(--bubblegum), 9px 9px 0 var(--ink);
+    transform: rotate(-2deg);
+    position: relative;
+  }
+  .teacher-polaroid img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center 18%;
+    background: var(--paper-warm);
+    display: block;
+  }
+  .teacher-polaroid .name-en {
+    position: absolute;
+    bottom: 36px; left: 18px; right: 18px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 26px;
+    color: var(--tomato);
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .teacher-polaroid .name-zh {
+    position: absolute;
+    bottom: 16px; left: 18px; right: 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+  .teacher-polaroid .years-stamp {
+    position: absolute;
+    top: -18px;
+    right: -16px;
+    width: 86px; height: 86px;
+    border-radius: 50%;
+    background: var(--highlight);
+    border: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    color: var(--ink);
+    transform: rotate(14deg);
+    box-shadow: 3px 3px 0 var(--ink);
+    line-height: 1;
+    text-align: center;
+    padding: 4px;
+  }
+  .teacher-polaroid .years-stamp small {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .teacher-story .lead-note {
+    display: inline-block;
+    background: var(--bubblegum-soft);
+    padding: 14px 20px;
+    margin-bottom: 28px;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--ink);
+    transform: rotate(-1deg);
+    box-shadow: 4px 4px 0 var(--ink);
+    position: relative;
+  }
+  .teacher-story .lead-note::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 10px; height: 10px;
+    background: var(--tomato);
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .teacher-text {
+    columns: 2;
+    column-gap: 32px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: var(--ink);
+  }
+  @media (max-width: 720px) { .teacher-text { columns: 1; } }
+  .teacher-text p { margin-bottom: 14px; break-inside: avoid; }
+  .teacher-text p:first-child::first-letter {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 78px;
+    line-height: 0.85;
+    color: var(--tomato);
+    float: left;
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+
+  .pull-quote {
+    margin: 36px 0;
+    text-align: center;
+    position: relative;
+    column-span: all;
+  }
+  .pull-quote .pq-text {
+    display: inline-block;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.2;
+    color: var(--ink);
+    padding: 14px 24px;
+    position: relative;
+  }
+  .pull-quote .pq-text::before {
+    content: '';
+    position: absolute;
+    inset: -10px -28px;
+    background:
+      radial-gradient(ellipse at center,
+        transparent 0,
+        transparent 64%,
+        var(--tomato) 65%,
+        var(--tomato) 67%,
+        transparent 68%);
+    transform: rotate(-2deg);
+    pointer-events: none;
+  }
+  .pull-quote .pq-aside {
+    display: inline-block;
+    margin-left: 14px;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--tomato);
+    transform: rotate(-6deg);
+  }
+
+  .manifesto-band {
+    margin: 44px 0;
+    padding: 22px 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-top: 6px solid var(--highlight);
+    border-bottom: 6px solid var(--highlight);
+    text-align: center;
+    column-span: all;
+    transform: rotate(-0.5deg);
+  }
+  .manifesto-band .lead {
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 3px;
+    color: var(--highlight);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .manifesto-band .stmt {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(20px, 2.6vw, 26px);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+  .manifesto-band .stmt em {
+    font-style: normal;
+    color: var(--highlight);
+  }
+
+  .voice-zone {
+    margin-top: 44px;
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 28px 32px;
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(0.4deg);
+    position: relative;
+  }
+  .voice-zone-label {
+    position: absolute;
+    top: -14px; left: 24px;
+    background: var(--marker-green);
+    border: 2px solid var(--ink);
+    padding: 4px 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink);
+    transform: rotate(-2deg);
+  }
+  .voice-card {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 600px) {
+    .voice-card { grid-template-columns: 80px 1fr; gap: 14px; }
+  }
+  .voice-polaroid {
+    background: var(--cream-100);
+    padding: 8px 8px 32px 8px;
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(-3deg);
+  }
+  .voice-polaroid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background: var(--paper-warm);
+  }
+  .voice-polaroid .vp-name {
+    position: relative;
+    margin-top: 4px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 13px;
+    text-align: center;
+    color: var(--ink-soft);
+  }
+  .voice-info .v-id {
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    color: var(--tomato);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .voice-info .v-text {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .voice-info .v-result {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--tomato);
+    background: var(--cream-100);
+    border: 1.5px solid var(--tomato);
+    padding: 3px 9px;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+   * ACT 05 ── 翻轉 + CTA
+   * ============================================================ */
+  .act-05 { padding: 96px 0 80px; }
+
+  .final-cover-wrap {
+    margin: 0 auto 56px;
+    max-width: 920px;
+    position: relative;
+  }
+  .final-cover {
+    background: var(--cream-100);
+    padding: 18px;
+    box-shadow: 14px 14px 0 var(--highlight), 16px 16px 0 var(--ink);
+    transform: rotate(-1.2deg);
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cover img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--paper-warm), var(--paper));
+    display: block;
+  }
+  .final-cover .answer-stamp {
+    position: absolute;
+    right: -8px; bottom: 14%;
+    background: var(--tomato);
+    color: var(--cream-100);
+    border: 3px solid var(--ink);
+    padding: 12px 22px;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    transform: rotate(-8deg);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .final-cover .cover-caption {
+    position: absolute;
+    bottom: 24px; left: 32px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 8px 14px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    color: var(--ink);
+    transform: rotate(-2deg);
+  }
+
+  .closing-h2 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.1;
+    text-align: center;
+    margin: 24px 0;
+    letter-spacing: -1.5px;
+  }
+  .closing-h2 .hl {
+    background: linear-gradient(transparent 60%, var(--highlight) 60%, var(--highlight) 92%, transparent 92%);
+    padding: 0 6px;
+  }
+
+  .closing-script {
+    max-width: 560px;
+    margin: 32px auto 48px;
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 24px 28px;
+    box-shadow: 5px 5px 0 var(--ink);
+    transform: rotate(-0.6deg);
+  }
+  .closing-script .cs-scene {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--tomato);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .closing-script p {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 8px 0;
+  }
+  .closing-script .q {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    color: var(--ink-soft);
+  }
+  .closing-script .answer {
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+    color: var(--tomato);
+    background: var(--highlight);
+    padding: 4px 14px;
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    margin-top: 6px;
+    letter-spacing: 2px;
+  }
+
+  .poem {
+    margin: 44px auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 17px;
+    line-height: 1.95;
+    color: var(--ink);
+  }
+  .poem p { margin: 4px 0; }
+  .poem .em { font-weight: 900; }
+  .poem .hl-yellow {
+    background: linear-gradient(transparent 60%, var(--highlight) 60%, var(--highlight) 90%, transparent 90%);
+    padding: 0 4px;
+  }
+
+  /* ── FAQ Wall ── */
+  .faq-wall {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 920px;
+    margin: 48px auto;
+  }
+  @media (max-width: 720px) { .faq-wall { grid-template-columns: 1fr; } }
+  .sticky-faq {
+    padding: 22px 24px;
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    cursor: pointer;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    list-style: none;
+  }
+  .sticky-faq::-webkit-details-marker { display: none; }
+  .sticky-faq.s-yellow { background: var(--highlight); transform: rotate(-1.5deg); }
+  .sticky-faq.s-pink { background: var(--bubblegum-soft); transform: rotate(1.2deg); }
+  .sticky-faq.s-blue { background: var(--washi-blue); transform: rotate(-0.8deg); }
+  .sticky-faq.s-green { background: var(--marker-green); transform: rotate(1.6deg); }
+  .sticky-faq:hover {
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+  .sticky-faq[open] {
+    transform: rotate(0deg);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+  .sticky-faq summary {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .sticky-faq summary::before {
+    content: 'Q.';
+    font-family: 'Anton', sans-serif;
+    color: var(--tomato);
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .sticky-faq[open] summary::before { content: 'Q!'; }
+  .sticky-faq .a {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1.5px dashed var(--ink);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ── SCARCITY BANNER ── */
+  .scarcity-banner {
+    max-width: 760px;
+    margin: 48px auto 32px;
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 22px 28px;
+    border: 3px solid var(--ink);
+    box-shadow: 7px 7px 0 var(--ink);
+    transform: rotate(-1deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .scarcity-banner .sb-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+  .scarcity-banner .sb-pulse {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--highlight);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+  }
+  .scarcity-banner .sb-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 2px;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta-row {
+    text-align: center;
+    margin: 32px 0 32px;
+  }
+  .final-cta-row .mega-cta {
+    font-size: 32px;
+    padding: 22px 44px;
+    box-shadow: 9px 9px 0 var(--ink);
+  }
+  .final-cta-row .mega-cta:hover { box-shadow: 13px 13px 0 var(--ink); }
+
+  .price-line {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin: 0 0 32px;
+    text-transform: uppercase;
+  }
+  .price-line strong { color: var(--tomato); }
+
+  .guarantee-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 720px;
+    margin: 32px auto 0;
+  }
+  @media (max-width: 600px) { .guarantee-row { grid-template-columns: 1fr; } }
+  .guarantee-card {
+    padding: 22px 24px;
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    position: relative;
+  }
+  .guarantee-card.g-1 { background: var(--cream-100); transform: rotate(-0.8deg); }
+  .guarantee-card.g-2 {
+    background: var(--tomato);
+    color: var(--cream-100);
+    transform: rotate(1deg);
+  }
+  .guarantee-card .g-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--cream-100);
+    padding: 4px 9px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .guarantee-card.g-2 .g-tag { background: var(--cream-100); color: var(--tomato); }
+  .guarantee-card .g-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .guarantee-card .g-body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  /* ============================================================
+   * COLOPHON
+   * ============================================================ */
+  .colophon {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 0 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .colophon-stripe {
+    height: 8px;
+    display: flex;
+  }
+  .colophon-stripe span { flex: 1; }
+  .colophon-stripe span:nth-child(1) { background: var(--paper); }
+  .colophon-stripe span:nth-child(2) { background: var(--highlight); }
+  .colophon-stripe span:nth-child(3) { background: var(--bubblegum); }
+  .colophon-stripe span:nth-child(4) { background: var(--chrome); }
+  .colophon-stripe span:nth-child(5) { background: var(--marker-green); }
+  .colophon-stripe span:nth-child(6) { background: var(--tomato); }
+
+  .colophon-mast {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(80px, 14vw, 180px);
+    line-height: 0.85;
+    letter-spacing: -3px;
+    background: linear-gradient(180deg, var(--chrome-shine), var(--chrome));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 24px 0 40px;
+  }
+
+  .colophon-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 36px;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(245, 239, 226, 0.2);
+  }
+  @media (max-width: 880px) { .colophon-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+  @media (max-width: 480px) { .colophon-grid { grid-template-columns: 1fr; } }
+
+  .colophon-col h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: var(--highlight);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .colophon-col p,
+  .colophon-col li {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.75;
+    color: rgba(245, 239, 226, 0.85);
+    list-style: none;
+  }
+  .colophon-col .brand-line {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--paper);
+    margin-bottom: 10px;
+  }
+
+  .colophon-issn {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 2.5px;
+    color: rgba(245,239,226,0.5);
+    text-transform: uppercase;
+    margin-top: 24px;
+  }
+  .colophon-issn .save-tag {
+    display: inline-block;
+    margin-left: 14px;
+    background: var(--highlight);
+    color: var(--ink);
+    padding: 3px 9px;
+    font-weight: 700;
+  }
+
+  /* ============================================================
+   * MOBILE STICKY CTA
+   * ============================================================ */
+  .mobile-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--cream-100);
+    border-top: 3px solid var(--ink);
+    padding: 12px 16px;
+    z-index: 200;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+  }
+  .mobile-cta.is-visible { display: flex; }
+  .mobile-cta .mc-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .mobile-cta .mc-price {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .mobile-cta .mc-old {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: line-through;
+    margin-left: 4px;
+  }
+  .mobile-cta .mc-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--tomato);
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+  .mobile-cta .mc-sub .dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: var(--tomato);
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  .mobile-cta a {
+    background: var(--tomato);
+    color: var(--cream-100);
+    padding: 11px 18px;
+    border-radius: 4px;
+    border: 2px solid var(--ink);
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(-1deg);
+    white-space: nowrap;
+  }
+  .mobile-cta a:hover { box-shadow: 5px 5px 0 var(--ink); }
+
+  @media (min-width: 760px) {
+    .mobile-cta { display: none !important; }
+  }
+
+  /* ============================================================
+   * RWD ADJUSTMENTS
+   * ============================================================ */
+  @media (max-width: 760px) {
+    .wrap { padding: 0 20px; }
+    section { padding: 64px 0; }
+    .act-01 { padding-top: calc(var(--header-h) + var(--marquee-h) + 40px); }
+    .act-num { font-size: 64px; }
+    .act-header { gap: 16px; margin-bottom: 36px; }
+    .pantry-polaroid { transform: rotate(-2deg); }
+    .pantry-polaroid:hover { transform: rotate(0deg); }
+    .four-card { transform: rotate(0deg) !important; }
+    .four-card:hover { transform: translate(-2px, -2px) !important; }
+    .m-center .vol-num { font-size: 22px; }
+    .m-center .vol-title { font-size: 11px; }
+    .m-left { font-size: 10px; }
+    .m-cta { padding: 8px 14px; font-size: 11px; }
+    .colophon-mast { font-size: 64px; }
+  }
+
+  @media (max-width: 480px) {
+    .m-right .m-date { display: none; }
+    .m-cta { padding: 7px 12px; }
+    .hero-h1 { font-size: 44px; }
+    .answer-flip h2 { font-size: 24px; }
+    .final-cta-row .mega-cta { font-size: 22px; padding: 16px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     MARQUEE 跑馬燈
+     ============================================================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="star">★</span>
+    <span>VOL.01&nbsp;&nbsp;行政祕書 AI 自救特刊</span>
+    <span class="yel">●</span>
+    <span>05/31 SAT&nbsp;&nbsp;15:00 ─ 16:30</span>
+    <span class="pink">●</span>
+    <span>ONLY 11 / 30 SEATS LEFT</span>
+    <span class="green">●</span>
+    <span>NT$1,300 → <strong style="color:var(--highlight);">NT$500</strong></span>
+    <span class="star">★</span>
+    <span>別在離職那天 才發現妳什麼都沒帶走</span>
+    <span class="yel">●</span>
+    <span>90 分鐘 帶走 5 件具體工具 + 改變 4 個下次</span>
+    <span class="pink">●</span>
+    <!-- 重複一次以接續無縫滾動 -->
+    <span class="star">★</span>
+    <span>VOL.01&nbsp;&nbsp;行政祕書 AI 自救特刊</span>
+    <span class="yel">●</span>
+    <span>05/31 SAT&nbsp;&nbsp;15:00 ─ 16:30</span>
+    <span class="pink">●</span>
+    <span>ONLY 11 / 30 SEATS LEFT</span>
+    <span class="green">●</span>
+    <span>NT$1,300 → <strong style="color:var(--highlight);">NT$500</strong></span>
+    <span class="star">★</span>
+    <span>別在離職那天 才發現妳什麼都沒帶走</span>
+    <span class="yel">●</span>
+    <span>90 分鐘 帶走 5 件具體工具 + 改變 4 個下次</span>
+    <span class="pink">●</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     MASTHEAD
+     ============================================================ -->
+<header class="masthead">
+  <div class="m-inner">
+    <div class="m-left">
+      <img src="images/404TABLE_logo.png" alt="404 TABLE" class="brand-logo">
+      <span class="holo-sub">AI × 職場培訓</span>
+    </div>
+    <div class="m-center">
+      <span class="vol-label">VOL.</span>
+      <span class="vol-num">01</span>
+      <span class="vol-title">90 分鐘 AI 自救號</span>
+    </div>
+    <div class="m-right">
+      <div class="m-date">
+        <strong>05/31</strong> SAT<br>
+        15:00 TPE
+      </div>
+      <a href="#final-cta" class="m-cta">立即報名</a>
+    </div>
+  </div>
+  <div class="progress-bar" id="progressBar"></div>
+</header>
+
+<!-- ============================================================
+     ACT 01 ── HERO
+     ============================================================ -->
+<section class="act-01" id="top">
+  <span class="scatter-prop tape-1" aria-hidden="true"></span>
+  <span class="scatter-prop tape-2" aria-hidden="true"></span>
+
+  <div class="wrap">
+
+    <div class="act-header reveal">
+      <div class="act-num">01</div>
+      <div class="act-meta">
+        <span class="act-tag red-bg">★ COVER STORY</span>
+        <span class="act-title-en">THE 3-SECOND PAUSE / 茶水間．週三下午</span>
+      </div>
+    </div>
+
+    <div class="act-01-grid">
+
+      <div class="hero-display">
+        <div class="course-banner reveal">
+          <span class="cb-tag">★ 90 MIN AI RESCUE ／ 5/31 SAT 15:00 ★</span>
+          <span class="cb-main">90 分鐘 <span class="pop">AI 自救</span></span>
+          <span class="cb-sub">別在離職那天，才發現妳什麼都沒帶走。</span>
+        </div>
+        <span class="eyebrow reveal">同事問妳：</span>
+        <h1 class="hero-h1 reveal">
+          <span class="stack">妳會什麼?</span>
+          <span class="stack">妳會什麼?</span>
+          <span class="stack">妳會什麼?</span>
+        </h1>
+
+        <div class="answer-flip reveal">
+          <div class="flip-eyebrow">★ THE TRUTH</div>
+          <h2>但妳會的，<br><span class="em-red">不只 這 些。</span></h2>
+        </div>
+
+        <div class="hero-meta reveal">
+          <div class="meta-cell">
+            <div class="meta-label">DATE</div>
+            <div class="meta-value">05/31</div>
+            <div class="meta-sub">SAT 15:00</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label">VENUE</div>
+            <div class="meta-value">TAIPEI</div>
+            <div class="meta-sub">實體限定</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label">SEATS</div>
+            <div class="meta-value">11 / 30</div>
+            <div class="meta-sub">即將額滿</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label">FEE</div>
+            <div class="meta-value"><span class="price-old">1,300</span>500</div>
+            <div class="meta-sub">教材帶回家</div>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 8px;">
+          <a href="#final-cta" class="mega-cta">
+            <span>我要看見自己會什麼</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <div class="byline reveal">
+          <div class="byline-portrait">
+            <img src="images/Bogi講師照片.JPG" alt="林渤浚 Bogi 講師頭像" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div>
+            BY ─ <strong>林渤浚 BOGI</strong> ｜ 80+ 家企業內訓講師
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="pantry-polaroid reveal reveal-r">
+          <img src="images/IMG-Y01_茶水間愣神_主場景.png"
+               alt="茶水間裡愣住 3 秒的秘書 ─ 4:5 直式"
+               loading="eager"
+               onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect fill=%22%23ede4cf%22 width=%22400%22 height=%22500%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23999%22>IMG-Y01 placeholder</text></svg>'">
+          <span class="washi yellow" style="--angle:-6deg; top:-8px; left: 18%;"></span>
+          <span class="washi pink" style="--angle:5deg; top:-8px; right: 18%;"></span>
+          <div class="caption">pantry pause &middot; <strong>3 sec.</strong></div>
+        </div>
+
+        <div class="pantry-script reveal reveal-r">
+          <span class="scene-tag">SCENE 01 ｜ 茶水間</span>
+          <p class="line">同事問妳：</p>
+          <p class="line q">「妳會什麼啊?」</p>
+          <p class="line beat">— 妳愣住了 3 秒。</p>
+          <p class="line">說：「就 ──</p>
+          <div class="stamps">
+            <span class="crossed" style="--angle:-3deg;">EXCEL</span>
+            <span class="crossed" style="--angle:2deg;">訂機票</span>
+            <span class="crossed" style="--angle:-1deg;">訂便當</span>
+          </div>
+          <p class="line beat" style="margin-top: 14px;">— 沒了。」</p>
+        </div>
+
+        <div class="sticky-note pink ps-note" style="--angle:-4deg;">
+          <span class="pin"></span>
+          <span class="label">P.S.</span>
+          「妳會什麼?」<br>
+          是當下最痛的<br>
+          問題。<br>
+          <span style="color:var(--tomato); font-weight:700;">但有答案。</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACT 02 ── 1,200
+     ============================================================ -->
+<section class="act-02">
+  <div class="wrap">
+
+    <div class="act-header reveal">
+      <div class="act-num">02</div>
+      <div class="act-meta">
+        <span class="act-tag chrome-bg">★ FEATURE ／ 揭示</span>
+        <span class="act-title-en">THE NUMBER YOU IGNORED ／ 妳沒在算的數字</span>
+      </div>
+    </div>
+
+    <div class="big-number-block reveal">
+      <span class="label-above">★ THE BIG NUMBER ★</span>
+      <div class="big-number">
+        1,200<span class="star">★</span>
+      </div>
+      <p class="big-number-caption">妳替老闆 <strong>記下的人</strong></p>
+      <p class="formula">10 YRS × 10 CARDS / MONTH × 1 PERSON / CARD = 1,200</p>
+    </div>
+
+    <ul class="proof-list">
+      <li class="reveal">
+        <span class="num">01</span>
+        <span class="text"><span class="check">✓</span>每張名片背後，妳記得 <strong>他孩子幾歲、老婆生日、咖啡幾分糖</strong>。</span>
+      </li>
+      <li class="reveal">
+        <span class="num">02</span>
+        <span class="text"><span class="check">✓</span>哪個律師擅長公司法、哪個會計師熟稅務、哪個老闆愛打高爾夫 ──<strong>妳全記得。</strong></span>
+      </li>
+      <li class="reveal">
+        <span class="num">03</span>
+        <span class="text"><span class="check">✓</span>誰跟誰有交情、誰跟誰最近不對盤、誰能幫誰一個忙 ──<strong>妳的腦中有整張地圖。</strong></span>
+      </li>
+      <li class="reveal">
+        <span class="num">04</span>
+        <span class="text"><span class="check">✓</span>老闆說「幫我約王律師」，妳 30 秒搞定 ── <strong>但同事問妳「妳會什麼」，妳愣住 3 秒。</strong></span>
+      </li>
+    </ul>
+
+    <div class="ability-banner reveal">
+      <div class="lead">★ INSIGHT NO.1 ★</div>
+      <div class="stmt">這 <em>1,200</em> 個人，不是「雜事」。<br>是妳用 <em>10 年</em> 蓋出來的<em>人脈底子</em>。</div>
+    </div>
+
+    <div class="key-quote-02 reveal">
+      <span class="marker-circle">沒有人告訴妳，這就叫「能力」。</span>
+      <div class="signoff">─ 但今天我告訴妳。</div>
+    </div>
+
+    <div class="cta-mini-row reveal">
+      <a href="#final-cta" class="cta-mini">
+        <span>我想看見我會什麼</span><span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     ACT 03 ── 4 件事 mood board
+     ============================================================ -->
+<section class="act-03">
+  <div class="wrap">
+
+    <div class="act-header reveal">
+      <div class="act-num">03</div>
+      <div class="act-meta">
+        <span class="act-tag yellow-bg">★ THE TAKE-HOME</span>
+        <span class="act-title-en">EVERYTHING YOU TAKE HOME ／ 妳會帶走的</span>
+      </div>
+    </div>
+
+    <p class="act-03-intro reveal">
+      90 分鐘，妳會帶走<span class="hl-y">兩種東西</span>。<br>
+      一種是<strong>手機裡裝得下的</strong>、一種是<span class="hl-pink"><strong>心裡裝得下的</strong></span>。
+    </p>
+
+    <!-- ============ A. 有形 5 件 ============ -->
+    <div class="take-section take-tangible reveal">
+      <div class="ts-head">
+        <span class="ts-eyebrow">★ A ／ 有形 5 件 ★</span>
+        <h3 class="ts-title">下班前、<span class="ts-pop">這 5 件全部進妳手機</span>。</h3>
+      </div>
+
+      <div class="t5-grid">
+
+        <article class="t5-card t5-01 reveal">
+          <span class="washi yellow" style="--angle:-5deg; top:-12px; left: 12%;"></span>
+          <div class="t5-num">· 01</div>
+          <h4 class="t5-title">妳的<strong>智慧名片庫</strong></h4>
+          <p class="t5-body">Bogi 現場帶妳做、只有妳能用。可以搜尋、可以分類、可以加標籤。下班前存進手機書籤 ── <strong>明天上班直接用。</strong></p>
+        </article>
+
+        <article class="t5-card t5-02 key reveal">
+          <span class="key-stamp">
+            <span class="stamp red">★<br>KEY<br>★</span>
+          </span>
+          <span class="washi pink" style="--angle:6deg; top:-12px; right: 14%;"></span>
+          <div class="t5-num">· 02</div>
+          <h4 class="t5-title">「<strong>老闆秒問妳秒答</strong>」<br>手機桌面捷徑</h4>
+          <p class="t5-body">把名片庫做成<strong>手機桌面 1-touch 捷徑</strong>。老闆 LINE 一問「上次那個誰」── 妳按桌面、輸入關鍵字、截圖回他。<strong>全程 5 秒。</strong></p>
+        </article>
+
+        <article class="t5-card t5-03 span-2 reveal">
+          <span class="washi blue" style="--angle:-4deg; top:-12px; left: 18%;"></span>
+          <div class="t5-num">· 03</div>
+          <h4 class="t5-title">5 個<strong>秘書 AI 小幫手</strong>（回家伴手禮）</h4>
+          <p class="t5-body">除了名片庫、回家還能用同一套方法做：</p>
+          <ul class="t5-sublist">
+            <li>會議紀要美化器</li>
+            <li>Email 三版本草稿產生器</li>
+            <li>出差報帳整理器</li>
+            <li>主管交辦清單追蹤</li>
+            <li>跨會議爭議查詢器</li>
+          </ul>
+          <p class="t5-body"><strong>每個都是現成範本、貼上去就能跑。</strong></p>
+        </article>
+
+        <article class="t5-card t5-04 reveal">
+          <span class="washi green" style="--angle:5deg; top:-12px; right: 12%;"></span>
+          <div class="t5-num">· 04</div>
+          <h4 class="t5-title"><strong>30 頁教材手冊</strong><br>(含逐字稿)</h4>
+          <p class="t5-body">整堂課的 slide、講師備註、現場範例、Q&amp;A 整理。<strong>30 頁 PDF</strong>、回家可以再複習一次、<strong>無限次重看</strong>。</p>
+        </article>
+
+        <article class="t5-card t5-05 reveal">
+          <span class="washi stripe-red" style="--angle:-6deg; top:-12px; left: 10%;"></span>
+          <div class="t5-num">· 05</div>
+          <h4 class="t5-title"><strong>30 天課後 LINE 群</strong></h4>
+          <p class="t5-body">Bogi 親自在群裡 30 天。卡關、想客製化、想問業界做法 ── <strong>直接問</strong>。每週 Bogi 會丟一個進階小技巧。</p>
+        </article>
+
+      </div>
+
+      <div class="cta-block-mid reveal">
+        <a href="#final-cta" class="cta-mini">
+          <span>這 5 件我都要</span><span>→</span>
+        </a>
+        <span class="cta-math">NT$500 ÷ 5 件 = <strong>一件 100 元</strong></span>
+      </div>
+    </div>
+
+    <!-- ============ B. 無形 4 個下次 ============ -->
+    <div class="take-section take-intangible reveal">
+      <div class="ts-head">
+        <span class="ts-eyebrow dark">★ B ／ 無形 4 個下次 ★</span>
+        <h3 class="ts-title dark">然後、妳的下一週、<br><span class="ts-pop-light">會變成這樣。</span></h3>
+        <p class="ts-sub-dark">工具會過時、下面這 4 件不會。</p>
+      </div>
+
+      <div class="next-list">
+
+        <div class="next-card reveal">
+          <span class="next-label">場景 01 ｜ 下次老闆問人</span>
+          <p class="next-before"><span class="strike">妳臉發燙、覺得「又是我」。</span></p>
+          <p class="next-after">妳會抬頭看老闆、<br>心裡知道：<span class="hl-y-thick">「對，又是我。」</span></p>
+        </div>
+
+        <div class="next-card reveal">
+          <span class="next-label">場景 02 ｜ 下次有人問「妳是做什麼的」</span>
+          <p class="next-before"><span class="strike">妳說「我是某某某的秘書」。</span></p>
+          <p class="next-after">妳會說：<br>「我替他<span class="hl-y-thick">管 1,200 個人的關係。</span>」</p>
+        </div>
+
+        <div class="next-card reveal">
+          <span class="next-label">場景 03 ｜ 下次主管會議全場安靜 3 秒</span>
+          <p class="next-before"><span class="strike">妳低頭、希望老闆問別人。</span></p>
+          <p class="next-after">妳會抬頭等老闆問妳、<br>因為<span class="hl-y-thick">妳已經知道答案在哪。</span></p>
+        </div>
+
+        <div class="next-card reveal">
+          <span class="next-label">場景 04 ｜ 下次妳半夜失眠想到工作</span>
+          <p class="next-before"><span class="strike">妳擔心這 10 年是不是白做了。</span></p>
+          <p class="next-after">妳會知道：<br><span class="hl-y-thick">這 10 年累積的、<br>都在妳的工具裡、<br>跟著妳走。</span></p>
+        </div>
+
+      </div>
+
+      <div class="cta-block-mid reveal">
+        <a href="#final-cta" class="cta-mini cta-on-dark">
+          <span>我要這 4 個「下次」</span><span>→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     ACT 04 ── 講師故事
+     ============================================================ -->
+<section class="act-04">
+  <div class="wrap">
+
+    <div class="act-header reveal">
+      <div class="act-num">04</div>
+      <div class="act-meta">
+        <span class="act-tag pink-bg">★ HER STORY</span>
+        <span class="act-title-en">WHY I GET YOUR 3 SECONDS ／ 為什麼我懂妳那 3 秒</span>
+      </div>
+    </div>
+
+    <div class="teacher-spread">
+
+      <div class="teacher-polaroid reveal">
+        <span class="years-stamp">80+<small>企業內訓</small></span>
+        <span class="washi blue" style="--angle:6deg; top:-11px; left: 18%;"></span>
+        <img src="images/Bogi講師照片.JPG"
+             alt="林渤浚 Bogi ─ 80+ 家企業內訓講師"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect fill=%22%23ede4cf%22 width=%22400%22 height=%22500%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23999%22>Bogi placeholder</text></svg>'">
+        <div class="name-en">BOGI.</div>
+        <div class="name-zh">林 渤 浚</div>
+      </div>
+
+      <div class="teacher-story reveal">
+        <div class="lead-note">為什麼我懂妳那 3 秒?</div>
+
+        <div class="teacher-text">
+          <p>我教 EA 跟秘書的企業內訓，到今年第 5 年。算一算，帶過的場次破 80 場。</p>
+
+          <p>每一場午休時間，幾乎一定會有一個學員端著便當走過來，跟我說一樣的話：</p>
+
+          <p><span class="hl-pink">「Bogi 老師，我先生（或我同學會）問我這幾年到底在做什麼，我不知道怎麼回答。」</span></p>
+
+          <p>她們講完那句話，眼神會飄一下、看著窗外。那個眼神，跟妳上週茶水間愣住的那 3 秒，是同一個。</p>
+
+          <div class="pull-quote">
+            <span class="pq-text">「我聽過 100 個 EA 跟我說<br>『我不知道我會什麼』。」</span>
+            <span class="pq-aside">── 一字不差</span>
+          </div>
+
+          <p>我自己不是秘書，但我懂那 3 秒。第一次創業做 Gogoro 精品美容，客戶看著我問：「你會什麼?」我也愣住過。那年我學到一件事 ── <strong>能力不是「妳做了什麼」、是「妳做的事，怎麼讓別人聽得懂」</strong>。</p>
+
+          <p>後來我用同一套邏輯，蓋出 1.7 萬人的 FB 社群、幫 80+ 家企業（國泰世華、富邦 momo、英業達、TP-Link、思科…）規劃過 AI 跟職場培訓、辦過上百場線下活動。每一次都在重複同一件事：把「我會的」翻譯成「別人聽得懂的價值」。</p>
+
+          <div class="manifesto-band">
+            <div class="lead">★ MANIFESTO ★</div>
+            <div class="stmt">妳的人脈、流程、判斷力，<br>從妳<em>第一張名片</em>整理那天起 ──<br>就是<em>妳的</em>，不是老闆的。</div>
+          </div>
+
+          <p>所以這堂課我不教 AI 怎麼用、也不教 Excel（YouTube 都有）。我教妳：<span class="hl-y">怎麼把妳已經會的東西，講得讓人聽得懂</span>。</p>
+
+          <p>1.5 小時、4 個模板。我把這 5 年看過 100 個 EA、做過上百場培訓濃縮出來的方法，<strong>讓妳當天帶走、回家就能用</strong>。</p>
+        </div>
+
+        <div class="voice-zone">
+          <span class="voice-zone-label">★ VOICE 學員回聲</span>
+          <div class="voice-card">
+            <div class="voice-polaroid">
+              <img src="images/IMG-Y04_學員Lisa_肖像.png"
+                   alt="Lisa ─ 45 歲傳產 15 年秘書"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23ede4cf%22 width=%22100%22 height=%22100%22/></svg>'">
+              <div class="vp-name">Lisa</div>
+            </div>
+            <div class="voice-info">
+              <div class="v-id">★ LISA ／ 45 / 傳產 15 年</div>
+              <div class="v-text">
+                「我以為我這 15 年就是一直在做雜事。<strong>上完這堂、我做出一份摺頁、丟給獵頭。</strong>三週後我跳槽，加薪 38%。」
+              </div>
+              <span class="v-result">RESULT: +38% salary in 3 weeks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-mini-row reveal" style="margin-top: 48px;">
+      <a href="#final-cta" class="cta-mini">
+        <span>我也想看見自己</span><span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     ACT 05 ── 翻轉 + CTA
+     ============================================================ -->
+<section class="act-05" id="final-cta">
+  <div class="wrap">
+
+    <div class="act-header reveal">
+      <div class="act-num">05</div>
+      <div class="act-meta">
+        <span class="act-tag red-bg">★ THE ANSWER</span>
+        <span class="act-title-en">THE DAY YOU WALK OUT ／ 妳走出去那天</span>
+      </div>
+    </div>
+
+    <div class="final-cover-wrap reveal">
+      <div class="final-cover">
+        <img src="images/IMG-Y05_翻轉走出去_背影.png"
+             alt="同一個人物 ─ 走出辦公室那天"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1920 1080%22><rect fill=%22%23ede4cf%22 width=%221920%22 height=%221080%22/><text x=%22960%22 y=%22540%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2240%22 fill=%22%23999%22>IMG-Y05 placeholder</text></svg>'">
+        <div class="answer-stamp">★ ANSWER ★</div>
+        <div class="cover-caption">the day she walked out &middot; <strong>answered.</strong></div>
+      </div>
+    </div>
+
+    <h2 class="closing-h2 reveal">
+      下次同事問──<br>
+      妳<span class="hl">答得出來。</span>
+    </h2>
+
+    <div class="closing-script reveal">
+      <div class="cs-scene">★ SCENE 05 ｜ 同一個茶水間．六週後</div>
+      <p class="q">同事：「妳會什麼啊?」</p>
+      <p>妳：</p>
+      <p><span class="answer">「我會的有點多。要看妳問哪一塊。」</span></p>
+      <p style="margin-top: 14px; font-family:'Permanent Marker',cursive; font-size:18px; color:var(--tomato); transform:rotate(-2deg); display:inline-block;">[ ANSWERED. ]</p>
+    </div>
+
+    <div class="poem reveal">
+      <p>老闆退休那天 ──</p>
+      <p>他會帶走他的人脈、合約、退休金。</p>
+      <p style="margin-top: 12px;"><strong>妳離開公司那天，</strong></p>
+      <p><span class="hl-yellow em">妳帶走什麼？</span></p>
+      <p style="margin-top: 18px;">這 90 分鐘 ── 是讓妳<span class="em">有東西可以帶</span>。</p>
+    </div>
+
+    <!-- FAQ Wall -->
+    <h3 class="reveal" style="font-family:'Anton',sans-serif; font-size:36px; text-align:center; margin: 32px 0 8px; letter-spacing: 2px;">★ CLASSIFIEDS / FAQ ★</h3>
+    <p class="reveal" style="text-align:center; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--ink-soft); margin-bottom:32px;">點開便利貼 ── 4 個她們問過的問題</p>
+
+    <div class="faq-wall">
+      <details class="sticky-faq s-yellow reveal">
+        <summary>我完全沒用過 AI，會不會跟不上?</summary>
+        <div class="a">會的、而且本來就是設計給妳的。1.5 小時內，我們從「打開 ChatGPT」開始 ── 不假設任何先備知識。妳會用 LINE，就會用這套。</div>
+      </details>
+
+      <details class="sticky-faq s-pink reveal">
+        <summary>我已經 45 歲了，現在學還有用嗎?</summary>
+        <div class="a">Lisa 45 歲、傳產 15 年、3 週後跳槽加薪 38%。年紀不是門檻，累積的東西才是。妳累積的、是 30 歲新人的 10 倍。</div>
+      </details>
+
+      <details class="sticky-faq s-blue reveal">
+        <summary>怕老公看不懂、怕同事覺得奇怪。</summary>
+        <div class="a">這堂課保密、不公開學員名單、也不發團體照。妳上完帶回家、自己用就好。下次跳槽，同事才會發現「她好像變了」。</div>
+      </details>
+
+      <details class="sticky-faq s-green reveal">
+        <summary>1.5 小時真的學得完?能帶什麼回家?</summary>
+        <div class="a">學得完。這 90 分鐘是「練完打包」、不是聽講座。妳當天帶走 <strong>6 樣可以直接用的東西</strong>：①人脈摺頁 Notion 範本 ②3 個 SOP × AI Prompt ③30 秒介紹腳本卡 ④妳的自介金句 ⑤10 個行政祕書必備 Prompt ⑥30 天 VIP Telegram 群。走出教室那一刻，全部已經填完／練完／改完。</div>
+      </details>
+    </div>
+
+    <!-- Scarcity -->
+    <div class="scarcity-banner reveal">
+      <span class="sb-pulse"></span>
+      <span class="sb-text">★ ONLY 11 / 30 SEATS LEFT ★</span>
+      <span class="sb-sub">5/31 SAT &middot; 一場、結束、no replay</span>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="final-cta-row reveal">
+      <a href="https://example.com/signup" class="mega-cta">
+        <span>好，我要報名</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <p class="price-line reveal">
+      ★ NT$1,300 → <strong>NT$500</strong> &middot; 1.5 hr &middot; 教材帶回家 &middot; 限額 30 ★
+    </p>
+
+    <!-- Guarantee -->
+    <div class="guarantee-row reveal">
+      <div class="guarantee-card g-1">
+        <span class="g-tag">★ GUARANTEE 01</span>
+        <div class="g-title">7 天無條件退費</div>
+        <div class="g-body">報名後 7 天內任何理由都能退、不問原因。妳的決定永遠可以反悔。</div>
+      </div>
+      <div class="guarantee-card g-2">
+        <span class="g-tag">★ GUARANTEE 02</span>
+        <div class="g-title">學完不值現場退</div>
+        <div class="g-body">課程結束、妳覺得不值 NT$500 ── 走出教室前找我、現場退費。我自己承擔。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     COLOPHON
+     ============================================================ -->
+<footer class="colophon">
+  <div class="colophon-stripe" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="wrap">
+
+    <div class="colophon-mast">404&nbsp;TABLE</div>
+
+    <div class="colophon-grid">
+      <div class="colophon-col">
+        <h4>★ BRAND</h4>
+        <p class="brand-line">別在離職那天、<br>才發現妳什麼都沒帶走。</p>
+        <p style="margin-top: 12px;">404 TABLE ─ 把妳會的東西、整理成別人聽得懂的價值。</p>
+      </div>
+      <div class="colophon-col">
+        <h4>★ ISSUE</h4>
+        <ul>
+          <li>VOL.01 ／ 行政祕書 AI 自救特刊</li>
+          <li>05/31 SAT ／ 15:00 ─ 16:30</li>
+          <li>TAIPEI 實體限定</li>
+          <li>NT$1,300 → NT$500</li>
+          <li>限額 30 ／ 剩 11</li>
+        </ul>
+      </div>
+      <div class="colophon-col">
+        <h4>★ SERIES</h4>
+        <ul>
+          <li>VOL.01 ─ 秘書 AI 自救班</li>
+          <li>VOL.02 ─ EA 跳槽工作坊</li>
+          <li>VOL.03 ─ 人脈摺頁設計營</li>
+          <li>VOL.01 ─ 行政祕書 AI 自救（本期）</li>
+        </ul>
+      </div>
+      <div class="colophon-col">
+        <h4>★ CONTACT</h4>
+        <ul>
+          <li>EMAIL ／ hi@404table.com</li>
+          <li>LINE ／ @404table</li>
+          <li>主辦 ／ 404 TABLE × Vibecoding 社群</li>
+          <li>講師 ／ 林渤浚 BOGI</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="colophon-issn">
+      ISSN&nbsp;EA-2026-VOL01 &middot; PRINTED IN TAIPEI &middot; © 2026 404 TABLE
+      <span class="save-tag">★ 截圖收藏 OK ★</span>
+    </p>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     MOBILE STICKY CTA
+     ============================================================ -->
+<div class="mobile-cta" id="mobileCta">
+  <div class="mc-info">
+    <div class="mc-price"><span class="mc-old">NT$1,300</span> NT$500</div>
+    <div class="mc-sub"><span class="dot"></span>剩 11 名 &middot; 5/31 SAT</div>
+  </div>
+  <a href="#final-cta">我要報名 →</a>
+</div>
+
+<script>
+  /* ============================================================
+   * REVEAL ON SCROLL
+   * ============================================================ */
+  (function() {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+  })();
+
+  /* ============================================================
+   * SCROLL PROGRESS BAR + MOBILE CTA SHOW/HIDE
+   * ============================================================ */
+  (function() {
+    const bar = document.getElementById('progressBar');
+    const mobileCta = document.getElementById('mobileCta');
+    const body = document.body;
+    const heroEnd = document.querySelector('.act-01');
+    const finalCta = document.querySelector('#final-cta');
+    let ticking = false;
+
+    function update() {
+      const scroll = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = Math.min(100, (scroll / docH) * 100);
+      if (bar) bar.style.width = pct + '%';
+
+      // mobile cta visibility
+      const heroBottom = heroEnd ? heroEnd.getBoundingClientRect().bottom : 0;
+      const finalTop = finalCta ? finalCta.getBoundingClientRect().top : 99999;
+      const inWindow = heroBottom < 0 && finalTop > window.innerHeight * 0.6;
+      if (window.innerWidth < 760 && inWindow) {
+        mobileCta.classList.add('is-visible');
+        body.classList.add('has-mobile-cta');
+      } else {
+        mobileCta.classList.remove('is-visible');
+        body.classList.remove('has-mobile-cta');
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  /* ============================================================
+   * RANDOMIZE POLAROID ANGLES SLIGHTLY (each load)
+   * ============================================================ */
+  (function() {
+    document.querySelectorAll('[data-jitter]').forEach(el => {
+      const base = parseFloat(el.dataset.jitter) || 0;
+      const j = (Math.random() - 0.5) * 1.6;
+      el.style.transform = `rotate(${base + j}deg)`;
+    });
+  })();
+</script>
+
+</body>
+</html>
